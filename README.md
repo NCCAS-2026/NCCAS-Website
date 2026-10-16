@@ -139,8 +139,12 @@ Current Board:
 - **Secretary**: Gauravi Sathsarani Bandara
 - **Treasurer**: Thejana Dahampath Pathirana
 - **Head of Media**: Yasath Channula Bihimuthu Kumarasinghe
+- **Chief Editor**: Yoshitha Sathyajith
 
-### 4. Updating Logos & Visual Assets
+### 4. Creator & Development Credits
+- **Designed, Themed & Programmed by**: Yasath Channula (Head of Media)
+
+### 5. Updating Logos & Visual Assets
 - Official Society Logo: `assets/logo/nccas-logo.png`
 - College Crest: `assets/logo/college-crest.png`
 - Astronomy Visuals: Place new `.jpg` or `.png` files in `assets/images/` and update the respective image paths in `index.html` or `script.js`.
