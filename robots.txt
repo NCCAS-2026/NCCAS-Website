@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nccas-astronomy.netlify.app/sitemap.xml

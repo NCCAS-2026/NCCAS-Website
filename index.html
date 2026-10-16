@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCCAS - Astronomy Society of A/Niwaththakachethiya National College</title>
+  <meta name="description" content="Official website of the Astronomy Society of A/Niwaththakachethiya National College, Sri Lanka (NCCAS). Explore observational astronomy, planetary science, stargazing camps, and youth space research. Reach beyond the stars.">
+  <meta name="keywords" content="NCCAS, Astronomy Society, Niwaththakachethiya National College, Anuradhapura, Sri Lanka astronomy, space science, telescope observation, planetary science, amateur astronomy">
+  <meta name="author" content="Astronomy Society of A/Niwaththakachethiya National College">
+  <link rel="canonical" href="https://nccas-astronomy.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nccas-astronomy.netlify.app/">
+  <meta property="og:title" content="NCCAS — Explore Beyond The Stars | Astronomy Society">
+  <meta property="og:description" content="Official website of the Astronomy Society of A/Niwaththakachethiya National College, Sri Lanka. Discover our celestial universe, stargazing camps, and executive board.">
+  <meta property="og:image" content="assets/images/hero-saturn.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://nccas-astronomy.netlify.app/">
+  <meta name="twitter:title" content="NCCAS — Astronomy Society of A/Niwaththakachethiya National College">
+  <meta name="twitter:description" content="Explore astronomy, planetary science, and youth space discoveries with NCCAS. Anuradhapura, Sri Lanka.">
+  <meta name="twitter:image" content="assets/images/hero-saturn.jpg">
+  <link rel="icon" type="image/png" href="assets/logo/nccas-logo.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="assets/logo/nccas-logo.png">
+  <meta name="theme-color" content="#03040A">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="starfield-canvas" aria-hidden="true"></canvas>
+  <header class="navbar-wrapper">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="#hero" class="navbar-brand">
+        <img src="assets/logo/nccas-logo.png" alt="NCCAS Official Crest" class="navbar-logo-img">
+        <div class="navbar-brand-text">
+          <span class="navbar-brand-title">NCCAS</span>
+          <span class="navbar-brand-sub">Astronomy Society</span>
+        </div>
+      </a>
+      <ul class="navbar-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#discover" class="nav-link">Discover</a></li>
+        <li><a href="#executive-board" class="nav-link">Executive Board</a></li>
+        <li><a href="#social" class="nav-link">Connect</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdBGd3nHT00P2NWzoMJ97IL8oQQNEA-zCq7MYzr3bmEtwUFg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-cta-btn">
+          Join Us
+        </a>
+        <button class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <div id="mobile-nav" class="mobile-nav-drawer" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About Us</a></li>
+      <li><a href="#discover" class="mobile-nav-link">Discover</a></li>
+      <li><a href="#executive-board" class="mobile-nav-link">Executive Board</a></li>
+      <li><a href="#social" class="mobile-nav-link">Connect</a></li>
+    </ul>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdBGd3nHT00P2NWzoMJ97IL8oQQNEA-zCq7MYzr3bmEtwUFg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; max-width: 260px;">
+      Join Society
+    </a>
+  </div>
+  <main>
+    <section id="hero" class="hero-section" aria-label="Welcome to NCCAS">
+      <div class="hero-background-wrapper">
+        <img src="assets/images/hero-saturn.jpg" alt="Saturn and celestial rings in deep space" class="hero-bg-image">
+        <div class="hero-gradient-overlay"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-eyebrow-container">
+          <img src="assets/logo/college-crest.png" alt="A/Niwaththakachethiya National College Crest" class="hero-school-crest">
+          <span class="hero-eyebrow">A/NIWATHTHAKACHETHIYA NATIONAL COLLEGE</span>
+        </div>
+        <h1 class="hero-title">EXPLORE BEYOND THE STARS.</h1>
+        <p class="hero-description">
+          A universe of discovery begins with curiosity. Join NCCAS to explore astronomy, uncover the mysteries of space, and discover the science behind our universe.
+        </p>
+        <div class="hero-buttons">
+          <a href="#discover" class="btn btn-primary">
+            EXPLORE THE UNIVERSE
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdBGd3nHT00P2NWzoMJ97IL8oQQNEA-zCq7MYzr3bmEtwUFg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            JOIN OUR SOCIETY
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+        <div class="hero-tagline-container">
+          <div class="hero-tagline">REACH BEYOND THE STARS</div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="section" aria-label="About NCCAS">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span class="pulse-dot"></span>
+            ASTRONOMICAL HERITAGE
+          </div>
+          <h2 class="section-title">A COMMUNITY CONNECTED BY THE COSMOS.</h2>
+          <p class="section-subtitle">
+            Welcome to the Astronomy Society of A/Niwaththakachethiya National College. We are dedicated to nurturing scientific curiosity, observational acumen, and hands-on astronomical discovery among young scholars.
+          </p>
+        </div>
+        <div class="about-grid">
+          <div class="glass-card about-card corner-accent">
+            <h3 class="about-card-title">Our Mission</h3>
+            <p class="about-card-text">
+              To inspire, educate, and empower the students of A/Niwaththakachethiya National College by demystifying astronomy, facilitating regular telescope skywatch camps, and offering foundational training in observational techniques and modern astrophysics.
+            </p>
+            <svg class="about-card-icon-bg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </div>
+          <div class="glass-card about-card corner-accent">
+            <h3 class="about-card-title">Our Vision</h3>
+            <p class="about-card-text">
+              To establish NCCAS as a premier student astronomy hub in the North Central Province and across Sri Lanka, recognized for developing scientifically grounded thinkers who gaze at the night sky with wonder, critical insight, and academic rigor.
+            </p>
+            <svg class="about-card-icon-bg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M3 12h3M18 12h3M12 3v3M12 18v3"/></svg>
+          </div>
+          <div class="glass-card about-card corner-accent">
+            <h3 class="about-card-title">What We Explore</h3>
+            <p class="about-card-text">
+              From our own Moonâ€™s craters and planetary ring dynamics to distant stellar nurseries, black hole physics, deep-sky astrophotography, and citizen-science asteroid detection campaigns via digital telescopic surveys.
+            </p>
+            <svg class="about-card-icon-bg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m10 12-6 1.3a1 1 0 0 1-1.1-.7l-.5-2.2a1 1 0 0 1 .7-1.3L16.6 4.7"/><path d="M16.5 6a2 2 0 0 1 1.5-2.4l1.1-.3a2 2 0 0 1 2.4 1.5l.7 2.9a2 2 0 0 1-1.4 2.4l-1.1.3a2 2 0 0 1-2.4-1.5z"/><path d="m16 21-3.1-6.2"/><path d="m6 21 3.1-6.2"/></svg>
+          </div>
+          <div class="glass-card about-card corner-accent">
+            <h3 class="about-card-title">Why Astronomy Matters</h3>
+            <p class="about-card-text">
+              Astronomy is a humbling and character-building experience. It sparks cross-disciplinary curiosity spanning physics, mathematics, computing, and optics, reminding every student of our shared responsibility as custodians of planet Earth.
+            </p>
+            <svg class="about-card-icon-bg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="discover" class="section" aria-label="Discover the Universe">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span class="pulse-dot"></span>
+            CELESTIAL ARCHIVE
+          </div>
+          <h2 class="section-title">A UNIVERSE WAITING TO BE EXPLORED.</h2>
+          <p class="section-subtitle">
+            Interact with planetary bodies, stellar giants, and deep-space wonders. Click any celestial card to inspect scientific parameters, atmosphere, and equatorial viewing tips.
+          </p>
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All Objects (12)</button>
+          <button class="filter-tab" data-filter="solar">Solar System</button>
+          <button class="filter-tab" data-filter="deep_sky">Deep Space</button>
+        </div>
+        <div id="celestial-grid" class="celestial-grid"></div>
+      </div>
+    </section>
+    <section id="executive-board" class="section" aria-label="Executive Board">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span class="pulse-dot"></span>
+            LEADERSHIP &amp; STEWARDSHIP
+          </div>
+          <h2 class="section-title">MEET THE MINDS BEHIND NCCAS.</h2>
+          <p class="section-subtitle">
+            The team bringing our astronomy community together.
+          </p>
+        </div>
+        <div class="exec-grid">
+          <div class="glass-card exec-card exec-card-president corner-accent">
+            <div class="exec-avatar-wrapper">
+              <span class="exec-initials">MM</span>
+            </div>
+            <span class="exec-role-badge">PRESIDENT</span>
+            <h3 class="exec-name">Manuka Minsala</h3>
+            <span class="exec-society">NCCAS Executive Committee</span>
+          </div>
+          <div class="glass-card exec-card corner-accent">
+            <div class="exec-avatar-wrapper">
+              <span class="exec-initials">AS</span>
+            </div>
+            <span class="exec-role-badge">VICE PRESIDENT</span>
+            <h3 class="exec-name">Amithya Sahansith</h3>
+            <span class="exec-society">NCCAS Executive Committee</span>
+          </div>
+          <div class="glass-card exec-card corner-accent">
+            <div class="exec-avatar-wrapper">
+              <span class="exec-initials">GS</span>
+            </div>
+            <span class="exec-role-badge">SECRETARY</span>
+            <h3 class="exec-name">Gauravi Sathsarani</h3>
+            <span class="exec-society">NCCAS Executive Committee</span>
+          </div>
+          <div class="glass-card exec-card corner-accent">
+            <div class="exec-avatar-wrapper">
+              <span class="exec-initials">TD</span>
+            </div>
+            <span class="exec-role-badge">TREASURER</span>
+            <h3 class="exec-name">Thejana Dahampath</h3>
+            <span class="exec-society">NCCAS Executive Committee</span>
+          </div>
+          <div class="glass-card exec-card corner-accent">
+            <div class="exec-avatar-wrapper">
+              <span class="exec-initials">YC</span>
+            </div>
+            <span class="exec-role-badge">HEAD OF MEDIA</span>
+            <h3 class="exec-name">Yasath Channula</h3>
+            <span class="exec-society">NCCAS Executive Committee</span>
+          </div>
+          <div class="glass-card exec-card corner-accent">
+            <div class="exec-avatar-wrapper">
+              <span class="exec-initials">YS</span>
+            </div>
+            <span class="exec-role-badge">CHIEF EDITOR</span>
+            <h3 class="exec-name">Yoshitha Sathyajith</h3>
+            <span class="exec-society">NCCAS Executive Committee</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="astronomical" class="section" aria-label="Astronomical Initiative">
+      <div class="container">
+        <div class="astronomical-feature-card">
+          <img src="assets/images/astronomical-banner.jpg" alt="Deep cosmic space nebula and starfields" class="astronomical-bg">
+          <div class="astronomical-content">
+            <div class="astronomical-header">
+              <div class="section-eyebrow" style="margin-bottom: 1rem; border-color: rgba(145, 120, 255, 0.4); color: var(--nebula-violet);">
+                <span class="pulse-dot" style="background: var(--nebula-violet); box-shadow: 0 0 8px var(--nebula-violet);"></span>
+                FLAGSHIP PROVINCIAL CAMPAIGN
+              </div>
+              <h2 class="astronomical-title">ASTRONOMICAL</h2>
+              <p class="astronomical-description">
+                ASTRONOMICAL is NCCAS's signature initiative dedicated to expanding space science literacy, telescope observational workshops, and academic collaboration across schools in Anuradhapura and the North Central Province.
+              </p>
+            </div>
+            <div class="astronomical-pillars">
+              <div class="pillar-item">
+                <h4 class="pillar-title">Stargazing Nights</h4>
+                <p class="pillar-text">Equipping students with optical telescopes to track Saturn, Jupiter, and deep-sky nebulae in real time under pristine night skies.</p>
+              </div>
+              <div class="pillar-item">
+                <h4 class="pillar-title">Space Workshops</h4>
+                <p class="pillar-text">Practical laboratory sessions on telescope alignment, focal calibration, astrophotography mounts, and solar filtering.</p>
+              </div>
+              <div class="pillar-item">
+                <h4 class="pillar-title">Astroscience Quizzes</h4>
+                <p class="pillar-text">Inter-grade challenges encouraging students to delve into orbital mechanics, planetary geology, and cosmic history.</p>
+              </div>
+              <div class="pillar-item">
+                <h4 class="pillar-title">Citizen Research</h4>
+                <p class="pillar-text">Introductory asteroid tracking and celestial image processing using open astronomical survey archives.</p>
+              </div>
+            </div>
+            <a href="https://whatsapp.com/channel/0029VbCPCSwHrDZbx76dog0m" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              FOLLOW ASTRONOMICAL UPDATES
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="news" class="section" aria-label="Astronomy News and Discoveries">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span class="pulse-dot"></span>
+            ASTROPHYSICAL DISPATCHES
+          </div>
+          <h2 class="section-title">SIGNALS FROM THE UNIVERSE.</h2>
+          <p class="section-subtitle">
+            Verified space mission bulletins, astronomical discoveries, skywatching guides for Sri Lanka, and society announcements.
+          </p>
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-tab news-filter-tab active" data-category="all">All Signals</button>
+          <button class="filter-tab news-filter-tab" data-category="society">Society Announcements</button>
+          <button class="filter-tab news-filter-tab" data-category="discoveries">Astronomy Discoveries</button>
+          <button class="filter-tab news-filter-tab" data-category="space-news">Space News</button>
+          <button class="filter-tab news-filter-tab" data-category="skywatching">Skywatching</button>
+          <button class="filter-tab news-filter-tab" data-category="science-tech">Science &amp; Tech</button>
+        </div>
+        <div id="news-grid" class="news-grid"></div>
+      </div>
+    </section>
+    <section id="activities" class="section" aria-label="Society Activities and Events">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span class="pulse-dot"></span>
+            ASTRONOMICAL CALENDAR
+          </div>
+          <h2 class="section-title">OUR JOURNEY OF DISCOVERY.</h2>
+          <p class="section-subtitle">
+            Astro Night Campaign coming soon. Date and time will be announced soon.
+          </p>
+        </div>
+        <div id="events-grid" class="events-grid"></div>
+      </div>
+    </section>
+    <section id="join" class="section" aria-label="Join NCCAS">
+      <div class="container">
+        <div class="membership-card corner-accent">
+          <div class="section-eyebrow" style="margin-bottom: 1.25rem;">
+            <span class="pulse-dot"></span>
+            OFFICIAL ENROLLMENT
+          </div>
+          <h2 class="membership-heading">YOUR JOURNEY INTO THE UNIVERSE STARTS HERE.</h2>
+          <p class="membership-desc">
+            Curious about the stars? Explore astronomy, discover new ideas, and become part of the NCCAS community.
+          </p>
+          <div class="membership-perks">
+            <div class="perk-item">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 6.3L21 9.3l-4.8 4.8 1.1 6.9L12 17.8 6.7 21l1.1-6.9L3 9.3l6.6-1z"/></svg>
+              <span>Hands-on Telescope Sessions</span>
+            </div>
+            <div class="perk-item">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 6.3L21 9.3l-4.8 4.8 1.1 6.9L12 17.8 6.7 21l1.1-6.9L3 9.3l6.6-1z"/></svg>
+              <span>Astrophotography Workshops</span>
+            </div>
+            <div class="perk-item">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 6.3L21 9.3l-4.8 4.8 1.1 6.9L12 17.8 6.7 21l1.1-6.9L3 9.3l6.6-1z"/></svg>
+              <span>National Competition Mentorship</span>
+            </div>
+            <div class="perk-item">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 6.3L21 9.3l-4.8 4.8 1.1 6.9L12 17.8 6.7 21l1.1-6.9L3 9.3l6.6-1z"/></svg>
+              <span>Official NCCAS Membership Badge</span>
+            </div>
+          </div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdBGd3nHT00P2NWzoMJ97IL8oQQNEA-zCq7MYzr3bmEtwUFg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="font-size: 1.05rem; padding: 1rem 2.5rem;">
+            BECOME A MEMBER
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="social" class="section" aria-label="Official Social Channels">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span class="pulse-dot"></span>
+            OFFICIAL CHANNELS
+          </div>
+          <h2 class="section-title">STAY CONNECTED WITH THE COSMOS.</h2>
+          <p class="section-subtitle">
+            Follow our verified media streams for real time sky observation announcements, event schedules, and astrophotography highlights.
+          </p>
+        </div>
+        <div class="social-grid">
+          <div class="glass-card social-card social-whatsapp corner-accent">
+            <div class="social-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.37C9.37 7.37 9.1 7.43 8.88 7.67C8.65 7.92 8.02 8.51 8.02 9.73C8.02 10.95 8.91 12.12 9.03 12.28C9.15 12.45 10.74 14.9 13.18 15.96C13.76 16.21 14.21 16.36 14.57 16.47C15.15 16.66 15.68 16.63 16.1 16.57C16.57 16.5 17.54 15.98 17.74 15.41C17.95 14.85 17.95 14.37 17.88 14.27C17.82 14.17 17.66 14.11 17.41 13.99C17.17 13.86 15.97 13.27 15.74 13.19C15.52 13.11 15.35 13.07 15.19 13.31C15.03 13.56 14.56 14.11 14.42 14.27C14.28 14.44 14.13 14.46 13.89 14.34C13.65 14.21 12.87 13.96 11.95 13.14C11.23 12.5 10.75 11.71 10.61 11.47C10.47 11.22 10.59 11.09 10.72 10.96C10.83 10.85 10.96 10.67 11.09 10.53C11.21 10.38 11.25 10.28 11.33 10.12C11.41 9.95 11.37 9.81 11.31 9.69C11.25 9.56 10.78 8.41 10.58 7.93C10.39 7.46 10.19 7.53 10.04 7.52C9.89 7.51 9.71 7.37 9.53 7.37Z"/>
+              </svg>
+            </div>
+            <h3 class="social-title">WhatsApp Community</h3>
+            <p class="social-desc">Get instant weather alerts, observation notices, meeting broadcasts, and society updates directly on your phone.</p>
+            <a href="https://whatsapp.com/channel/0029VbCPCSwHrDZbx76dog0m" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+              Join Our WhatsApp Channel
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+          <div class="glass-card social-card social-instagram corner-accent">
+            <div class="social-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 19.4 19.4 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2ZM7.6 4C5.6 4 4 5.6 4 7.6V16.4C4 18.4 5.6 20 7.6 20H16.4C18.4 20 20 18.4 20 16.4V7.6C20 5.6 18.4 4 16.4 4H7.6ZM12 7C14.8 7 17 9.2 17 12C17 14.8 14.8 17 12 17C9.2 17 7 14.8 7 12C7 9.2 9.2 7 12 7ZM12 9C10.3 9 9 10.3 9 12C9 13.7 10.3 15 12 15C13.7 15 15 13.7 15 12C15 10.3 13.7 9 12 9ZM17.25 5.5C17.94 5.5 18.5 6.06 18.5 6.75C18.5 7.44 17.94 8 17.25 8C16.56 8 16 7.44 16 6.75C16 6.06 16.56 5.5 17.25 5.5Z"/>
+              </svg>
+            </div>
+            <h3 class="social-title">Instagram Feed</h3>
+            <p class="social-desc">Explore astrophotography captures, celestial infographics, student workshops, and behind the scenes telescope nights.</p>
+            <a href="https://www.instagram.com/nnce.astro/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+              Follow Us on Instagram
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+          <div class="glass-card social-card social-facebook corner-accent">
+            <div class="social-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V14.8H7.5V12H10V9.8C10 7.33 11.47 6 13.72 6C14.8 6 15.93 6.19 15.93 6.19V8.62H14.68C13.46 8.62 13.08 9.38 13.08 10.15V12H15.82L15.38 14.8H13.08V21.8C17.65 20.87 22 16.84 22 12Z"/>
+              </svg>
+            </div>
+            <h3 class="social-title">Facebook Page</h3>
+            <p class="social-desc">Follow official college programmes, academic symposium highlights, photo albums, and public astronomy awareness updates.</p>
+            <a href="https://www.facebook.com/share/18TTmhUwGo/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+              Visit Our Facebook Page
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logos">
+            <img src="assets/logo/nccas-logo.png" alt="NCCAS Official Logo" class="footer-logo-nccas">
+            <img src="assets/logo/college-crest.png" alt="A/Niwaththakachethiya National College Crest" class="footer-crest">
+          </div>
+          <h3 class="footer-school-name">A/Niwaththakachethiya National College</h3>
+          <p class="footer-desc">
+            The Astronomy Society of A/Niwaththakachethiya National College (NCCAS) is committed to expanding astronomy education, fostering scientific curiosity, and providing hands on sky observation experiences in Sri Lanka.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Us</a></li>
+            <li><a href="#discover" class="footer-link">Discover The Universe</a></li>
+            <li><a href="#executive-board" class="footer-link">Executive Board</a></li>
+            <li><a href="#astronomical" class="footer-link">Astronomical Campaign</a></li>
+            <li><a href="#news" class="footer-link">Signals &amp; Discoveries</a></li>
+            <li><a href="#activities" class="footer-link">Society Activities</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Official Media</h4>
+          <ul class="footer-nav-list">
+            <li><a href="https://whatsapp.com/channel/0029VbCPCSwHrDZbx76dog0m" target="_blank" rel="noopener noreferrer" class="footer-link">WhatsApp Channel</a></li>
+            <li><a href="https://www.instagram.com/nnce.astro/" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a></li>
+            <li><a href="https://www.facebook.com/share/18TTmhUwGo/" target="_blank" rel="noopener noreferrer" class="footer-link">Facebook Page</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfdBGd3nHT00P2NWzoMJ97IL8oQQNEA-zCq7MYzr3bmEtwUFg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="footer-link">Membership Form</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> Astronomy Society of A/Niwaththakachethiya National College (NCCAS). All rights reserved.
+        </div>
+        <div class="footer-tagline">REACH BEYOND THE STARS.</div>
+      </div>
+    </div>
+  </footer>
+  <div id="celestial-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Celestial Object Details">
+    <div class="modal-dialog">
+      <button id="celestial-modal-close" class="modal-close-btn" aria-label="Close dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div id="celestial-modal-body" class="modal-body"></div>
+    </div>
+  </div>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top of page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+  <script src="script.js" defer></script>
+</body>
+</html>
