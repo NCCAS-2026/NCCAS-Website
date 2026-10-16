@@ -28,6 +28,35 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="site-intro" class="site-intro">
+    <canvas id="intro-canvas" class="intro-canvas"></canvas>
+    <div class="intro-content">
+      <div class="intro-logo-container">
+        <div class="intro-orbit-ring intro-orbit-ring-1"></div>
+        <div class="intro-orbit-ring intro-orbit-ring-2"></div>
+        <div class="intro-core-glow"></div>
+        <img src="assets/logo/nccas-logo.png" alt="NCCAS Official Crest" class="intro-logo-img">
+      </div>
+      <div class="intro-brand">
+        <div class="intro-eyebrow">A/NIWATHTHAKACHETHIYA NATIONAL COLLEGE</div>
+        <h1 class="intro-title">
+          <span class="intro-letter">N</span><span class="intro-letter">C</span><span class="intro-letter">C</span><span class="intro-letter">A</span><span class="intro-letter">S</span>
+        </h1>
+        <p class="intro-sub">ASTRONOMY SOCIETY</p>
+        <p class="intro-tagline">REACH BEYOND THE STARS</p>
+      </div>
+      <div class="intro-loader-box">
+        <div class="intro-status-text" id="intro-status-text">INITIALIZING OBSERVATORY...</div>
+        <div class="intro-progress-bar">
+          <div class="intro-progress-fill" id="intro-progress-fill"></div>
+        </div>
+      </div>
+      <button class="intro-skip-btn" id="intro-skip-btn" aria-label="Skip intro animation">
+        SKIP INTRO
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19"/></svg>
+      </button>
+    </div>
+  </div>
   <canvas id="starfield-canvas" aria-hidden="true"></canvas>
   <header class="navbar-wrapper">
     <nav class="navbar" aria-label="Main Navigation">
@@ -82,7 +111,7 @@
         </div>
         <h1 class="hero-title">EXPLORE BEYOND THE STARS.</h1>
         <p class="hero-description">
-          A universe of discovery begins with curiosity. Join NCCAS to explore astronomy, uncover the mysteries of space, and discover the science behind our universe.
+          A universe of discovery begins with curiosity. Join NCCAS to explore astronomy, uncover the mysteries of space, and discover the science behind the universe.
         </p>
         <div class="hero-buttons">
           <a href="#discover" class="btn btn-primary">
@@ -122,14 +151,14 @@
           <div class="glass-card about-card corner-accent">
             <h3 class="about-card-title">Our Vision</h3>
             <p class="about-card-text">
-              To establish NCCAS as a premier student astronomy hub in the North Central Province and across Sri Lanka, recognized for developing scientifically grounded thinkers who gaze at the night sky with wonder, critical insight, and academic rigor.
+              To establish NCCAS as a premier student astronomy club in the North Central Province and across Sri Lanka, recognized for developing scientifically grounded thinkers who gaze at the night sky with wonder, critical insight, and academic rigor.
             </p>
             <svg class="about-card-icon-bg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M3 12h3M18 12h3M12 3v3M12 18v3"/></svg>
           </div>
           <div class="glass-card about-card corner-accent">
             <h3 class="about-card-title">What We Explore</h3>
             <p class="about-card-text">
-              From our own Moonâ€™s craters and planetary ring dynamics to distant stellar nurseries, black hole physics, deep-sky astrophotography, and citizen-science asteroid detection campaigns via digital telescopic surveys.
+              From our own Moon craters and planetary ring dynamics to distant stellar nurseries, black hole physics, deep sky astrophotography, and citizen-science asteroid detection campaigns via digital telescopic surveys.
             </p>
             <svg class="about-card-icon-bg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m10 12-6 1.3a1 1 0 0 1-1.1-.7l-.5-2.2a1 1 0 0 1 .7-1.3L16.6 4.7"/><path d="M16.5 6a2 2 0 0 1 1.5-2.4l1.1-.3a2 2 0 0 1 2.4 1.5l.7 2.9a2 2 0 0 1-1.4 2.4l-1.1.3a2 2 0 0 1-2.4-1.5z"/><path d="m16 21-3.1-6.2"/><path d="m6 21 3.1-6.2"/></svg>
           </div>
@@ -245,7 +274,7 @@
             <div class="astronomical-pillars">
               <div class="pillar-item">
                 <h4 class="pillar-title">Stargazing Nights</h4>
-                <p class="pillar-text">Equipping students with optical telescopes to track Saturn, Jupiter, and deep-sky nebulae in real time under pristine night skies.</p>
+                <p class="pillar-text">Equipping students with optical telescopes to track Saturn, Jupiter, and deep sky nebulae in real time under pristine night skies.</p>
               </div>
               <div class="pillar-item">
                 <h4 class="pillar-title">Space Workshops</h4>

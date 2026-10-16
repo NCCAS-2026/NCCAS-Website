@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  initSiteIntro();
   initStarfield();
   initNavigation();
   initCelestialExplorer();
@@ -7,6 +8,125 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollEffects();
   initDynamicYear();
 });
+
+function initSiteIntro() {
+  const intro = document.getElementById('site-intro');
+  if (!intro) return;
+
+  const introCanvas = document.getElementById('intro-canvas');
+  const progressFill = document.getElementById('intro-progress-fill');
+  const statusText = document.getElementById('intro-status-text');
+  const skipBtn = document.getElementById('intro-skip-btn');
+
+  let animId;
+  let isFinished = false;
+
+  if (introCanvas) {
+    const ctx = introCanvas.getContext('2d');
+    let w = (introCanvas.width = window.innerWidth);
+    let h = (introCanvas.height = window.innerHeight);
+
+    window.addEventListener('resize', () => {
+      w = introCanvas.width = window.innerWidth;
+      h = introCanvas.height = window.innerHeight;
+    }, { passive: true });
+
+    const particles = [];
+    for (let i = 0; i < 90; i++) {
+      particles.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 2 + 0.5,
+        speedX: (Math.random() - 0.5) * 0.8,
+        speedY: (Math.random() - 0.5) * 0.8,
+        color: ['#69F0F0', '#9178FF', '#EACB91', '#FFFFFF'][Math.floor(Math.random() * 4)],
+        alpha: Math.random() * 0.7 + 0.3
+      });
+    }
+
+    function renderIntroStars() {
+      if (isFinished) return;
+      ctx.clearRect(0, 0, w, h);
+
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        p.x += p.speedX;
+        p.y += p.speedY;
+
+        if (p.x < 0) p.x = w;
+        if (p.x > w) p.x = 0;
+        if (p.y < 0) p.y = h;
+        if (p.y > h) p.y = 0;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = p.alpha;
+        ctx.fill();
+      }
+
+      ctx.globalAlpha = 1;
+      animId = requestAnimationFrame(renderIntroStars);
+    }
+    renderIntroStars();
+  }
+
+  const duration = 5000;
+  const startTime = performance.now();
+
+  const statuses = [
+    { at: 0.15, text: 'CALIBRATING TELESCOPE ARRAYS...' },
+    { at: 0.40, text: 'SCANNING NIGHT SKY...' },
+    { at: 0.70, text: 'SYNCHRONIZING CELESTIAL TELEMETRY...' },
+    { at: 0.90, text: 'OBSERVATORY READY. WELCOME TO NCCAS.' }
+  ];
+
+  function updateProgress(now) {
+    if (isFinished) return;
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+
+    if (progressFill) {
+      progressFill.style.width = `${progress * 100}%`;
+    }
+
+    if (statusText) {
+      for (let i = statuses.length - 1; i >= 0; i--) {
+        if (progress >= statuses[i].at) {
+          if (statusText.textContent !== statuses[i].text) {
+            statusText.textContent = statuses[i].text;
+          }
+          break;
+        }
+      }
+    }
+
+    if (progress < 1) {
+      requestAnimationFrame(updateProgress);
+    } else {
+      setTimeout(hideIntro, 400);
+    }
+  }
+
+  requestAnimationFrame(updateProgress);
+
+  const hideIntro = () => {
+    if (isFinished) return;
+    isFinished = true;
+    cancelAnimationFrame(animId);
+    intro.classList.add('fade-out');
+    setTimeout(() => {
+      intro.remove();
+    }, 1000);
+  };
+
+  skipBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hideIntro();
+  });
+
+  intro.addEventListener('click', hideIntro);
+}
 
 function initStarfield() {
   const canvas = document.getElementById('starfield-canvas');
@@ -221,7 +341,7 @@ const CELESTIAL_DATA = [
     image: 'assets/images/sun.jpg',
     tagline: 'The blazing gravitational anchor of our solar system',
     diameter: '1,392,700 km',
-    distance: '0 km (Center)',
+    distance: '149.9 Million km',
     orbitalPeriod: '~230 Million Yrs',
     temperature: '5,500°C (Surface)',
     atmosphere: 'Hydrogen (73%), Helium (25%)',
